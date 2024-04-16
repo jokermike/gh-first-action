@@ -1,10 +1,15 @@
-name:  First workflow 
+#nom du workflow
+name: First workflow 
+ #specifier le trigger qui va declencher les evenements
+ #workflow_dispatch signifie que nous allons nous meme lancer le declenchement
 on: workflow_dispatch
+
+#les taches a faires
 jobs:
-  first_job:
+  first-job: # nom de la premiere tache
     runs-on: ubuntu-latest
     steps:
-      - name: Print greeting\
-        run: echo "Hello world!"
-      - name: Print Goodbye
-        run: echo "Done-Bye"
+      - name: print greeting
+        run: echo "Hello world"
+      - name: print goodbye
+        run: echo "Done-bye!"
